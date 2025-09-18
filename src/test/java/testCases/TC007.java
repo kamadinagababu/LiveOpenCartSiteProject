@@ -1,0 +1,45 @@
+package testCases;
+
+
+import java.time.Duration;
+import java.util.Date;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class TC007 {
+	@Test
+	public void verifyRegisterAccountWithInvalidPhNumber() throws InterruptedException
+	{
+		WebDriver driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.get("http://localhost/openCartsite/");
+		driver.manage().window().maximize();
+		
+      driver.findElement(By.xpath("//i[@class='fa fa-user']")).click();
+       driver.findElement(By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Register']")).click();
+       driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys("chaithu");
+       driver.findElement(By.xpath("//input[@id='input-lastname']")).sendKeys("kamadi");
+       driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(generateRandomEmail());
+      driver.findElement(By.xpath("//input[@id='input-telephone']")).sendKeys("abcd");
+      driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys("1234");
+      driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys("1234");
+     driver.findElement(By.xpath("//label[normalize-space()='Yes']")).click();
+      driver.findElement(By.xpath("//input[@name='agree']")).click();
+       driver.findElement(By.xpath("//input[@value='Continue']")).click();
+         Thread.sleep(3000);
+
+         
+	}
+	
+	
+	public String generateRandomEmail()
+	{
+		Date date=new Date();
+		return date.toString().replaceAll("\\s", "").replaceAll("\\:", "")+"@gmail.com";
+		
+	}
+
+}

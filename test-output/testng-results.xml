@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-18T13:45:58 IST" name="Default suite" finished-at="2025-09-18T13:46:17 IST" duration-ms="18701">
+  <suite started-at="2025-09-18T15:53:48 IST" name="Default suite" finished-at="2025-09-18T15:53:58 IST" duration-ms="9169">
     <groups>
     </groups>
-    <test started-at="2025-09-18T13:45:58 IST" name="Default test" finished-at="2025-09-18T13:46:17 IST" duration-ms="18701">
-      <class name="testCases.TC006">
-        <test-method signature="verifyAcoountRigisterWithInavlidEmail()[pri:0, instance:testCases.TC006@682b2fa]" started-at="2025-09-18T13:45:58 IST" name="verifyAcoountRigisterWithInavlidEmail" finished-at="2025-09-18T13:46:17 IST" duration-ms="18664" status="PASS">
+    <test started-at="2025-09-18T15:53:48 IST" name="Default test" finished-at="2025-09-18T15:53:58 IST" duration-ms="9169">
+      <class name="testCases.TC007">
+        <test-method signature="verifyRegisterAccountWithInvalidPhNumber()[pri:0, instance:testCases.TC007@682b2fa]" started-at="2025-09-18T15:53:48 IST" name="verifyRegisterAccountWithInvalidPhNumber" finished-at="2025-09-18T15:53:58 IST" duration-ms="9119" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAcoountRigisterWithInavlidEmail -->
-      </class> <!-- testCases.TC006 -->
+        </test-method> <!-- verifyRegisterAccountWithInvalidPhNumber -->
+      </class> <!-- testCases.TC007 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
