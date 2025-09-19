@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-19T12:20:11 IST" name="Default suite" finished-at="2025-09-19T12:20:37 IST" duration-ms="25538">
+  <suite started-at="2025-09-19T15:36:01 IST" name="Default suite" finished-at="2025-09-19T15:36:10 IST" duration-ms="9674">
     <groups>
     </groups>
-    <test started-at="2025-09-19T12:20:11 IST" name="Default test" finished-at="2025-09-19T12:20:37 IST" duration-ms="25538">
-      <class name="testCases.TC008">
-        <test-method signature="verifyAccountRegisterUsingKeyboardKeys()[pri:0, instance:testCases.TC008@385c9627]" started-at="2025-09-19T12:20:11 IST" name="verifyAccountRegisterUsingKeyboardKeys" finished-at="2025-09-19T12:20:37 IST" duration-ms="25487" status="PASS">
+    <test started-at="2025-09-19T15:36:01 IST" name="Default test" finished-at="2025-09-19T15:36:10 IST" duration-ms="9674">
+      <class name="testCases.TC003">
+        <test-method signature="AccountRigsterWithNewsletter()[pri:0, instance:testCases.TC003@7dcf94f8]" started-at="2025-09-19T15:36:01 IST" name="AccountRigsterWithNewsletter" finished-at="2025-09-19T15:36:10 IST" duration-ms="9621" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAccountRegisterUsingKeyboardKeys -->
-      </class> <!-- testCases.TC008 -->
+        </test-method> <!-- AccountRigsterWithNewsletter -->
+      </class> <!-- testCases.TC003 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
