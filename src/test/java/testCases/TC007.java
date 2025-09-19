@@ -9,6 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import utils.commonUtils;
+
 public class TC007 {
 	@Test
 	public void verifyRegisterAccountWithInvalidPhNumber() throws InterruptedException
@@ -22,7 +24,7 @@ public class TC007 {
        driver.findElement(By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Register']")).click();
        driver.findElement(By.xpath("//input[@id='input-firstname']")).sendKeys("chaithu");
        driver.findElement(By.xpath("//input[@id='input-lastname']")).sendKeys("kamadi");
-       driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(generateRandomEmail());
+       driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(commonUtils.generateRandomEmail());
       driver.findElement(By.xpath("//input[@id='input-telephone']")).sendKeys("abcd");
       driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys("1234");
       driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys("1234");
@@ -31,6 +33,11 @@ public class TC007 {
        driver.findElement(By.xpath("//input[@value='Continue']")).click();
          Thread.sleep(3000);
 
+         
+         //account created there was a problem 
+         //raise the issue and talk to developer
+         
+         
          
 	}
 	
