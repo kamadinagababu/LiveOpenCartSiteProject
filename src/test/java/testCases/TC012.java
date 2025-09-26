@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import utils.commonUtils;
 
-public class TC0012 {
+public class TC012 {
 
 	WebDriver driver;
 	@AfterMethod

@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC0011 {
+public class TC011 {
 	@Test
 	public void AccountRegisterWithOnlySpaces()
 	{

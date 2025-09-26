@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC0010 {
+public class TC010 {
 	@Test
 	public void verifyRegisterAccountWithSymbleAndColor() {
 		
