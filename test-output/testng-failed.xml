@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC015">
+      <class name="testCases.TC017">
         <methods>
-          <include name="verifyRegisterAccountWithoutPrivacyPolicySelection"/>
+          <include name="verifyWorkingOfEveryLinkOnRegisterAccountPage"/>
         </methods>
-      </class> <!-- testCases.TC015 -->
+      </class> <!-- testCases.TC017 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
