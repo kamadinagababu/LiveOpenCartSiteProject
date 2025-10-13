@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC020">
+      <class name="testCases.TC021">
         <methods>
-          <include name="verifyUIofAccountPage"/>
+          <include name="verifyRegisterAccopuntInDefferentTestEnvironments" invocation-numbers="2"/>
         </methods>
-      </class> <!-- testCases.TC020 -->
+      </class> <!-- testCases.TC021 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

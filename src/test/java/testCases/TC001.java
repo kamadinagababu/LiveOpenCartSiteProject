@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 import utils.commonUtils;
 
-public class TC001_AccountRegistrationTest {
+public class TC001 {
      @Test
 	public void AccountRigister() {
 		WebDriver driver=new ChromeDriver();
