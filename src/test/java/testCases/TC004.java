@@ -6,16 +6,29 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TC004 {
+	WebDriver driver;
+	
+	@BeforeMethod
+	public void setup() {
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+		driver.get("http://localhost/openCartsite/");
+		driver.manage().window().maximize();
+	}
+
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
+	}
 	@Test
 	public  void VerifyNavigatingToRegisterAccountUsingMultipleWay()
 	{
-		WebDriver driver=new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
-		driver.get("http://localhost/openCartsite/");
-		driver.manage().window().maximize();
+		
 		
 		driver.findElement(By.xpath("//i[@class='fa fa-user']")).click();
 		driver.findElement(By.xpath("//a[normalize-space()='Register']")).click();
@@ -26,7 +39,7 @@ public class TC004 {
 		driver.findElement(By.xpath("//a[normalize-space()='Continue']")).click();
 		Assert.assertTrue(driver.findElement(By.xpath("//h1[normalize-space()='Register Account']")).isDisplayed());
 		
-		driver.quit();
+		
 		
 	}
 

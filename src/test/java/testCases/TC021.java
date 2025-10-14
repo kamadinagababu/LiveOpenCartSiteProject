@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -12,6 +13,12 @@ import utils.commonUtils;
 
 public class TC021 {
 	WebDriver driver;
+	@AfterMethod
+	public void teardown()
+	{
+		driver.quit();
+	
+	}
 	@Test(dataProvider="environmentData")
 	public void verifyRegisterAccopuntInDefferentTestEnvironments(String env) {
 	 		
@@ -49,7 +56,8 @@ public class TC021 {
 			driver.findElement(By.xpath("//input[@id='input-confirm']")).sendKeys("Chaithu@111");
 			driver.findElement(By.xpath("//input[@name='agree']")).click();
 			driver.findElement(By.xpath("//input[@value='Continue']")).click();
-			driver.quit();		
+			
+				
 	}
 
 @DataProvider(name="environmentData")

@@ -6,16 +6,29 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class TC005 {
+	
+WebDriver driver;
+	
+	@BeforeMethod
+	public void setup() {
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
+		driver.get("http://localhost/openCartsite/");
+		driver.manage().window().maximize();
+	}
+
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
+	}
 	@Test
 	public void verifyAccountRegisterWithExitEmail()
 	{
-		WebDriver driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get("http://localhost/openCartsite/");
 		
 		driver.findElement(By.xpath("//ul[@class='list-inline']//li[@class='dropdown']")).click();
 		
@@ -34,7 +47,7 @@ public class TC005 {
      String ExpectedWarnigMsg="Warning: E-Mail Address is already registered!";
      
      Assert.assertEquals(driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText(), ExpectedWarnigMsg);
-     driver.quit();
+    
 		
 	}
 

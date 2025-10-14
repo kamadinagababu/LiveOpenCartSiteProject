@@ -5,6 +5,7 @@
     <classes>
       <class name="testCases.TC021">
         <methods>
+          <include name="teardown"/>
           <include name="verifyRegisterAccopuntInDefferentTestEnvironments" invocation-numbers="2"/>
         </methods>
       </class> <!-- testCases.TC021 -->

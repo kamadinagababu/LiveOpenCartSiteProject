@@ -11,20 +11,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import utils.commonUtils;
 
 public class TC020 {
+	WebDriver driver;
+
+	@BeforeMethod
+	public void setup() {
+		driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.get("http://localhost/openCartsite/");
+		driver.manage().window().maximize();
+		driver.findElement(By.xpath("//i[@class='fa fa-user']")).click();
+		driver.findElement(
+				By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Register']")).click();
+	}
+
+	@AfterMethod
+	public void teardown() {
+		driver.quit();
+	}
+
      @Test
 	public void verifyUIofAccountPage()  {
-    	 WebDriver driver=new ChromeDriver();
- 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
- 		driver.get("http://localhost/openCartsite/");
- 		driver.manage().window().maximize();
- 		
- 		driver.findElement(By.xpath("//span[normalize-space()='My Account']")).click();
- 		driver.findElement(By.xpath("//a[normalize-space()='Register']")).click();
+    	
  		
  		TakesScreenshot ts = (TakesScreenshot)driver;
  		File srcScreenShot = ts.getScreenshotAs(OutputType.FILE);
@@ -42,6 +56,6 @@ public class TC020 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
- 		driver.quit();
+ 		
 	}
 }
