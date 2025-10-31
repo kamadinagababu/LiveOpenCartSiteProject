@@ -14,19 +14,18 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+
+import basepage.Base;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
-public class TC006 {
+public class TC006 extends Base {
 
 	WebDriver driver;
 
 	@BeforeMethod
 	public void setup() {
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-		driver.get("http://localhost/openCartsite/");
-		driver.manage().window().maximize();
+		driver=OpenBrowserAndApplication();
 	}
 
 	@AfterMethod

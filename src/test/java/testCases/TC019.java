@@ -10,16 +10,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TC019 {
+import basepage.Base;
+
+public class TC019 extends Base {
 	WebDriver driver;
 
 	@BeforeMethod
 	public void setup() {
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get("http://localhost/openCartsite/");
-		driver.manage().window().maximize();
-		driver.findElement(By.xpath("//i[@class='fa fa-user']")).click();
+		driver=OpenBrowserAndApplication();
+				driver.findElement(By.xpath("//i[@class='fa fa-user']")).click();
 		driver.findElement(
 				By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Register']")).click();
 	}

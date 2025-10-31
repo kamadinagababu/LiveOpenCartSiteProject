@@ -41,7 +41,7 @@ public class TC021 {
 	 		}
 	 		
 	 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-	 		driver.get("http://localhost/openCartsite/");
+	 		driver.get("https://tutorialsninja.com/demo/");
 	 		driver.manage().window().maximize();
 	 		
 	 		

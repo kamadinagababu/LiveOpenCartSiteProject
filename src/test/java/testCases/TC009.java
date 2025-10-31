@@ -10,15 +10,14 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TC009 {
+import basepage.Base;
+
+public class TC009 extends Base {
 	WebDriver driver;
 
 	@BeforeMethod
 	public void setup() {
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(4));
-		driver.get("http://localhost/openCartsite/");
-		driver.manage().window().maximize();
+		driver=OpenBrowserAndApplication();
 	}
 
 	@AfterMethod

@@ -1,27 +1,21 @@
 package testCases;
 
-import java.time.Duration;
-import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import basepage.Base;
 import utils.commonUtils;
 
-public class TC001 {
+public class TC001 extends Base {
 	WebDriver driver;
 
 	@BeforeMethod
 	public void setup() {
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
-		driver.get("http://localhost/openCartsite/");
-		driver.manage().window().maximize();
+		driver=OpenBrowserAndApplication();
 		driver.findElement(By.xpath("//i[@class='fa fa-user']")).click();
 		driver.findElement(
 				By.xpath("//ul[@class='dropdown-menu dropdown-menu-right']//a[normalize-space()='Register']")).click();
